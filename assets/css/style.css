@@ -1261,3 +1261,94 @@ input:focus, select:focus, textarea:focus {
     margin-left: auto;
   }
 }
+/* ============================================================
+   MOBILE HEADER REFINEMENT + LEGAL ROUTES SUPPORT
+   ============================================================ */
+@media (max-width: 860px) {
+  .brand-tag {
+    display: none !important;
+  }
+  .brand {
+    align-items: center;
+    gap: 12px;
+    max-width: calc(100% - 84px);
+  }
+  .brand-copy {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+  }
+  .brand-title {
+    margin: 0;
+    line-height: 1;
+  }
+  .site-nav {
+    align-items: center;
+  }
+  .nav-actions {
+    align-self: center;
+    margin-left: auto;
+  }
+  .menu-toggle {
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* Legal page theme helpers */
+.legal-page {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+.legal-page .site-header {
+  position: sticky;
+}
+.legal-page .legal-hero {
+  background: #ffffff !important;
+  color: #0a0a0a !important;
+  border-bottom: 1px solid #e6e8ec;
+}
+.legal-page .legal-hero p {
+  color: #5a6473 !important;
+}
+.legal-page .legal-badge {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+.legal-page .legal-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 20px 80px;
+}
+.legal-page .legal-body h2 {
+  color: #0a0a0a !important;
+  border-bottom: 1px solid #e6e8ec !important;
+}
+.legal-page .legal-body h3,
+.legal-page .legal-body a {
+  color: #000000 !important;
+}
+.legal-page .legal-body p,
+.legal-page .legal-body li,
+.legal-page .legal-updated,
+.legal-page .legal-body .muted {
+  color: #5a6473 !important;
+}
+.legal-page .legal-toc,
+.legal-page .legal-highlight,
+.legal-page .legal-warning,
+.legal-page .legal-contact-card {
+  background: #f7f8fa !important;
+  border: 1px solid #e6e8ec !important;
+  border-left: 4px solid #000000 !important;
+}
+.legal-page .legal-warning strong,
+.legal-page .legal-highlight strong {
+  color: #000000 !important;
+}
+.legal-page .footer-links a,
+.legal-page .site-footer a {
+  color: #ffffff !important;
+}
