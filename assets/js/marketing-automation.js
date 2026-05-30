@@ -358,7 +358,7 @@
           <strong>🎯 Free website audit included</strong> — Receive a complete report for your website within 24h
         </span>
         <div class="nd-sticky-actions">
-          <a href="#contact" class="nd-sticky-btn">Claim now →</a>
+          <a href="#contactForm" class="nd-sticky-btn">Claim now →</a>
           <button class="nd-sticky-dismiss" aria-label="Close">&times;</button>
         </div>
       </div>
@@ -661,7 +661,7 @@
               "name": "How much does a professional website cost at Ziri Dev?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Our professional websites start from €150. Pricing depends on project complexity: landing page, business site, e-commerce or mobile application."
+                "text": "Our professional websites start from $300. Pricing depends on project complexity: landing page, business site, e-commerce or mobile application."
               }
             },
             {
@@ -677,7 +677,7 @@
               "name": "Does Ziri Dev build mobile apps?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, we build high-performance iOS and Android applications from €200, with polished UX and strong technical execution."
+                "text": "Yes, we build high-performance iOS and Android applications from $400, with polished UX and strong technical execution."
               }
             }
           ]

@@ -192,9 +192,9 @@
   /* ── Greeting ── */
   function greet() {
     const greetings = [
-      "👋 Hi! I'm the Ziri Dev assistant. We build premium websites & apps from $200. What kind of project are you working on?",
-      "👋 Hello! I help businesses get professional websites. Landing pages from $150, full sites from $150. What brings you here today?",
-      "👋 Hi there! Ziri Dev here — premium web & mobile development for businesses worldwide. E-commerce from $200, apps from $200. How can I help?"
+      "👋 Hi! I'm the Ziri Dev assistant. We build premium websites & apps from $300. What kind of project are you working on?",
+      "👋 Hello! I help businesses get professional websites. Landing pages from $300, full sites from $300. What brings you here today?",
+      "👋 Hi there! Ziri Dev here — premium web & mobile development for businesses worldwide. E-commerce from $400, apps from $400. How can I help?"
     ];
     const msg = greetings[Math.floor(Math.random() * greetings.length)];
     addMessage(msg, 'bot');

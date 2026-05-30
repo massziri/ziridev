@@ -1352,3 +1352,9 @@ input:focus, select:focus, textarea:focus {
 .legal-page .site-footer a {
   color: #ffffff !important;
 }
+
+
+/* CONTACT FORM SCROLL TARGET */
+#contactForm {
+  scroll-margin-top: 120px;
+}
