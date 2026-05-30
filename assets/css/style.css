@@ -1355,6 +1355,12 @@ input:focus, select:focus, textarea:focus {
 
 
 /* CONTACT FORM SCROLL TARGET */
+#contact-anchor,
 #contactForm {
   scroll-margin-top: 120px;
+}
+
+@media (max-width: 860px) {
+  .form-panel { order: 1 !important; }
+  .info-panel { order: 2 !important; }
 }
