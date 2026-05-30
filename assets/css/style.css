@@ -348,7 +348,7 @@ section { padding: 84px 0; }
   gap: 12px;
   align-items: flex-start;
 }
-.check-item span {
+.check-item > span {
   display: inline-grid;
   place-items: center;
   width: 28px;
@@ -358,6 +358,9 @@ section { padding: 84px 0; }
   color: #67e8f9;
   flex: 0 0 auto;
   font-weight: 900;
+}
+.check-item > div {
+  min-width: 0;
 }
 .check-item strong { display: block; margin-bottom: 3px; }
 .check-item p { margin: 0; color: rgba(255,255,255,0.78); font-size: 0.94rem; }
@@ -1044,9 +1047,16 @@ body {
   border: 1px solid var(--line) !important;
   color: var(--text);
 }
-.check-item span {
+.check-item > span {
   background: #000000 !important;
   color: #ffffff !important;
+}
+.check-item .label-text {
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  color: var(--text) !important;
 }
 .check-item p { color: var(--muted) !important; }
 .check-item strong { color: var(--text); }

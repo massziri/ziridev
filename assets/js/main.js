@@ -12,23 +12,23 @@
       required: 'Please complete the required fields before submitting your request.',
       sending: 'Sending your request…',
       submit: 'Book my consultation',
-      fallback: 'We could not send your request right now. Please try again in a moment.',
-      network: 'A network error occurred. Please try again in a moment.'
+      fallback: 'We could not send your request right now. Please try again in a moment or contact us directly by email.',
+      network: 'A network error occurred. Please try again in a moment.',
     },
     fr: {
       required: 'Veuillez remplir les champs obligatoires avant d’envoyer votre demande.',
       sending: 'Envoi en cours…',
       submit: 'Réserver ma consultation',
-      fallback: 'Nous n’avons pas pu envoyer votre demande pour le moment. Merci de réessayer dans un instant.',
-      network: 'Une erreur réseau est survenue. Merci de réessayer dans un instant.'
+      fallback: 'Nous ne pouvons pas envoyer votre demande pour le moment. Merci de réessayer dans un instant ou de nous contacter directement par e-mail.',
+      network: 'Une erreur réseau est survenue. Merci de réessayer dans un instant.',
     }
   };
 
   const t = messages[lang.startsWith('fr') ? 'fr' : 'en'];
 
   toggle?.addEventListener('click', () => {
-    const isOpen = header.classList.toggle('menu-open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
+    const isOpen = header?.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', String(Boolean(isOpen)));
   });
 
   document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -65,10 +65,10 @@
       payload[key] = value;
     });
 
-    const firstName = (payload.fname || '').toString().trim();
-    const lastName = (payload.lname || '').toString().trim();
-    const email = (payload.email || '').toString().trim();
-    const company = (payload.company || '').toString().trim();
+    const firstName = String(payload.fname || '').trim();
+    const lastName = String(payload.lname || '').trim();
+    const email = String(payload.email || '').trim();
+    const company = String(payload.company || '').trim();
 
     if (!firstName || !lastName || !email || !company) {
       showAlert(error, t.required);
@@ -84,22 +84,26 @@
     try {
       const response = await fetch('/api/submit', {
         method: 'POST',
-        headers: { 
+        headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json' 
+          'Accept': 'application/json'
         },
         body: JSON.stringify(payload)
       });
 
       const result = await response.json().catch(() => ({}));
-      
+      const upstreamMessage = String(result?.message || '').trim();
+      const safeMessage = upstreamMessage && !/internal server error/i.test(upstreamMessage)
+        ? upstreamMessage
+        : t.fallback;
+
       if (response.ok && (result.success === true || result.success === 'true')) {
         if (typeof fbq === 'function') fbq('track', 'Lead');
         window.location.href = 'thank-you.html';
         return;
       }
 
-      showAlert(error, result.message || t.fallback);
+      showAlert(error, safeMessage || t.fallback);
     } catch (err) {
       console.error('Submission error:', err);
       showAlert(error, t.network);
