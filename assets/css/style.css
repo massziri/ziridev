@@ -906,3 +906,358 @@ textarea { min-height: 120px; resize: vertical; }
   background: rgba(255,255,255,0.12);
   color: #fff;
 }
+
+/* ============================================================
+   PROFESSIONAL THEME OVERRIDE — White background + Black buttons
+   Added 2026-05-30. Keep at end of file so it wins the cascade.
+   ============================================================ */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f8fa;
+  --surface: #ffffff;
+  --surface-soft: #f5f6f8;
+  --text: #0a0a0a;
+  --muted: #5a6473;
+  --line: #e6e8ec;
+  --primary: #000000;
+  --primary-2: #1a1a1a;
+  --accent: #000000;
+  --accent-2: #2a2a2a;
+  --white: #ffffff;
+  --shadow: 0 10px 30px rgba(10, 10, 10, 0.06);
+  --hero-shadow: 0 16px 40px rgba(10, 10, 10, 0.10);
+}
+
+/* Base */
+body {
+  background: #ffffff !important;
+  color: var(--text);
+}
+
+/* Header — clean white, light border */
+.site-header {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+.brand { color: var(--text); }
+.brand-mark {
+  background: #000000 !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+.brand-mark span { color: #ffffff; }
+.brand-title { color: var(--text); }
+.brand-title em { color: #000000; font-style: normal; }
+.brand-tag { color: var(--muted); }
+
+.nav-links a { color: var(--text); }
+.nav-links a:hover { color: #000000; }
+.nav-links a.nav-cta { color: #000000; font-weight: 800; }
+
+/* Buttons — black with white text */
+.btn-primary {
+  background: #000000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+.btn-primary:hover { background: #1a1a1a !important; }
+
+.btn-secondary {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #000000;
+  box-shadow: none;
+}
+.btn-secondary:hover { background: #f2f2f2 !important; }
+
+/* Hamburger — black on white, aligned right on mobile */
+.menu-toggle {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000;
+  margin-left: auto;
+}
+.menu-toggle:hover { background: #1a1a1a !important; }
+
+/* Hero — white background, dark text */
+.hero {
+  background: #ffffff !important;
+  color: var(--text) !important;
+  padding: 86px 0 58px;
+}
+.hero h1 { color: var(--text); }
+.hero h1 span { color: #000000; }
+.hero p { color: var(--muted) !important; }
+
+.eyebrow {
+  background: #f2f2f2 !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text);
+}
+.hero-points span {
+  background: #f5f6f8 !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text);
+}
+
+/* Hero card — light surface */
+.hero-card {
+  background: #ffffff !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--hero-shadow);
+  color: var(--text);
+}
+.hero-card h2 { color: var(--text); }
+.hero-card p { color: var(--muted) !important; }
+.mini-card {
+  background: #f7f8fa !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text);
+}
+.mini-card strong { color: var(--text); }
+.mini-card span { color: var(--muted); }
+
+/* Stats */
+.stat strong { color: #000000 !important; }
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.card .icon {
+  background: #f2f2f2 !important;
+  color: #000000 !important;
+}
+.card .icon svg { stroke: #000000 !important; }
+
+/* Dark band → light band */
+.dark-band {
+  background: #f7f8fa !important;
+  color: var(--text) !important;
+}
+.dark-band .section-head p { color: var(--muted) !important; }
+.check-item {
+  background: #ffffff !important;
+  border: 1px solid var(--line) !important;
+  color: var(--text);
+}
+.check-item span {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+.check-item p { color: var(--muted) !important; }
+.check-item strong { color: var(--text); }
+
+/* Steps */
+.step-number {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Form */
+.form-panel, .info-panel {
+  background: #ffffff;
+  border: 1px solid var(--line);
+}
+.info-panel { background: #f7f8fa !important; }
+input, select, textarea {
+  background: #ffffff !important;
+  border: 1.5px solid var(--line) !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #000000 !important;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08) !important;
+  background: #ffffff !important;
+}
+.info-dot {
+  background: #f2f2f2 !important;
+  color: #000000 !important;
+}
+.badge-row span {
+  background: #f2f2f2 !important;
+  color: #000000 !important;
+}
+
+/* Quote */
+.quote::before { color: rgba(0, 0, 0, 0.10) !important; }
+.quote strong { color: #000000 !important; }
+
+/* Footer — keep dark for contrast, but pure black */
+.site-footer {
+  background: #000000 !important;
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-links a { color: #ffffff !important; }
+.footer-links a:hover { color: #cccccc !important; }
+
+/* Language switcher — dark text on light header */
+.nd-lang-switch {
+  color: var(--text) !important;
+  border: 1px solid var(--line) !important;
+}
+.nd-lang-switch:hover {
+  background: #f2f2f2 !important;
+  color: #000000 !important;
+}
+
+/* Chat — black accent */
+#ai-chat-bubble {
+  background: #000000 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+#ai-chat-bubble:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  outline: 3px solid rgba(0, 0, 0, 0.15);
+}
+.chat-header {
+  background: #000000 !important;
+}
+.chat-msg.user .chat-bubble {
+  background: #000000 !important;
+  color: #ffffff;
+}
+#chat-send {
+  background: #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+#chat-send:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
+.chat-quick-btn {
+  background: #f5f6f8 !important;
+  color: #000000 !important;
+  border: 1.5px solid var(--line) !important;
+}
+.chat-quick-btn:hover { background: #e9eaee !important; }
+.chat-typing span { background: #000000 !important; }
+
+/* ── Mobile: hamburger pinned right ─────────────────────── */
+@media (max-width: 860px) {
+  .site-nav {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .brand { margin-right: auto; }
+  .nav-actions {
+    margin-left: auto;
+    order: 2;
+  }
+  .nav-actions .btn-primary { display: none; }
+  .menu-toggle {
+    margin-left: auto;
+    display: inline-grid !important;
+    place-items: center;
+  }
+  .nav-links {
+    order: 10;
+    width: 100%;
+  }
+  .nav-links a {
+    background: #f5f6f8 !important;
+    color: var(--text) !important;
+  }
+  .site-header.menu-open .nav-links { display: flex; }
+}
+
+/* ============================================================
+   Extra overrides for inline-styled marketing elements
+   ============================================================ */
+
+/* Sticky top announcement banner */
+#sticky-banner {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+#sticky-banner a {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+#sticky-banner .close-banner { color: #ffffff !important; }
+
+/* Social proof ticker */
+#social-proof {
+  background: #f7f8fa !important;
+  border-bottom: 1px solid #e6e8ec !important;
+  color: #0a0a0a !important;
+}
+
+/* Scroll progress bar */
+#scroll-bar {
+  background: #000000 !important;
+}
+
+/* Exit overlay popup */
+#exit-box h2 { color: #0a0a0a !important; }
+#exit-box .exit-yes {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+#exit-box .exit-no {
+  background: #f2f2f2 !important;
+  color: #0a0a0a !important;
+}
+
+/* Floating WhatsApp button — keep brand green (it's a recognized icon),
+   but if you want black, uncomment below */
+/*
+#wa-float {
+  background: #000000 !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,.35) !important;
+}
+*/
+
+/* Lead strip (newsletter) */
+.lead-strip {
+  background: #0a0a0a !important;
+  color: #ffffff !important;
+}
+.lead-strip p { color: rgba(255,255,255,0.8) !important; }
+.lead-form button {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Stats animated number */
+.stat strong { color: #000000 !important; }
+
+/* Trust badges */
+.trust-badges {
+  background: #f7f8fa !important;
+  border-bottom: 1px solid #e6e8ec !important;
+}
+.trust-badge {
+  background: #ffffff !important;
+  border: 1px solid #e6e8ec !important;
+  color: #0a0a0a !important;
+}
+
+/* Urgency bar */
+.urgency-bar {
+  background: #f2f2f2 !important;
+  border-top: 2px solid #0a0a0a !important;
+  border-bottom: 2px solid #0a0a0a !important;
+  color: #0a0a0a !important;
+}
+
+/* Lead popup */
+#lead-popup {
+  border-top: 4px solid #000000 !important;
+}
+#lead-popup h4 { color: #0a0a0a !important; }
+#lead-popup button.lp-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* CTA timer keeps red - it's an urgency signal */
+
+/* Mobile: ensure hamburger is truly aligned right */
+@media (max-width: 860px) {
+  .site-nav { gap: 12px; }
+  .brand { flex: 1 1 auto; min-width: 0; }
+  .nav-actions {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+}
