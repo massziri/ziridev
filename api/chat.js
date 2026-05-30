@@ -20,7 +20,7 @@ const SYSTEM_PROMPT = `You are a smart, warm and professional AI sales assistant
    Only use their name if they explicitly introduced themselves.
 
 2. BUDGET REALITY CHECK — Always apply these rules:
-   - Core services start from $300 / e-commerce from $400 / mobile apps from $400 / redesign from $300
+   - Core services start from $300 / e-commerce from $700 / mobile apps from $400 / redesign from $300 / SEO & performance from $300
    - Be honest about budget constraints but always offer alternatives
    - NEVER promise below minimum pricing
    - ALWAYS use $ (dollar sign), NEVER use € (euro sign) in this English version
@@ -39,10 +39,9 @@ const SYSTEM_PROMPT = `You are a smart, warm and professional AI sales assistant
 - Services:
   • Landing pages — from $300 (1-2 weeks)
   • Business/corporate websites — from $300 (2-5 pages, 2-4 weeks)
-  • E-commerce websites — from $400 (15-60 days)
+  • E-commerce websites — from $700 (15-60 days)
   • Website redesign — from $300 (3-5 weeks)
-  • UI/UX design — from $1000
-  • SEO & performance — from $600
+    • SEO & performance — from $300
   • Mobile apps (iOS & Android) — from $400 (8-16 weeks)
 - Ideal clients: startups, B2B companies, e-commerce brands, professional services, French businesses
 - Process: Clarify goals → Design & develop precisely → Launch & grow
@@ -51,7 +50,7 @@ const SYSTEM_PROMPT = `You are a smart, warm and professional AI sales assistant
 ━━━ PRICING (use these exact figures — ALWAYS in $ dollars) ━━━
 - Landing page: from $300
 - Business website: from $300
-- E-commerce site: from $400 (starter), up to $3,000 (full-featured)
+- E-commerce site: from $700 (starter), up to $3,000 (full-featured)
 - Website redesign: from $300
 - Mobile app: from $400
 - These are very competitive — most agencies charge 3-10× more
@@ -212,9 +211,9 @@ async function sendLeadToBrevo(lead) {
             </div>
             <div style="padding:32px;background:#fff;border:1px solid #e2e8f0;border-top:none;border-radius:0 0 12px 12px;">
               <h2 style="color:#0d2e1c;">Hi ${lead.name || 'there'} 👋</h2>
-              <p style="color:#475569;line-height:1.7;">Thank you for reaching out to <strong>Ziri Dev</strong>! We've received your enquiry and our team will review your project details shortly.</p>
-              <p style="color:#475569;line-height:1.7;">We typically respond <strong>within 24 hours</strong> with a tailored proposal for your project.</p>
-              ${lead.service ? `<p style="background:#f0f9ff;border-left:4px solid #2d9e5e;padding:12px 16px;border-radius:4px;color:#0d2e1c;"><strong>Your project:</strong> ${lead.service}</p>` : ''}
+              <p style="color:#475569;line-height:1.7;">Thank you for reaching out to <span class="label-text">Ziri Dev</span>! We've received your enquiry and our team will review your project details shortly.</p>
+              <p style="color:#475569;line-height:1.7;">We typically respond <span class="label-text">within 24 hours</span> with a tailored proposal for your project.</p>
+              ${lead.service ? `<p style="background:#f0f9ff;border-left:4px solid #2d9e5e;padding:12px 16px;border-radius:4px;color:#0d2e1c;"><span class="label-text">Your project:</span> ${lead.service}</p>` : ''}
               <div style="text-align:center;margin:28px 0;">
                 <a href="https://ziridev.vercel.app/#contact" style="background:#2d9e5e;color:#fff;padding:14px 28px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;">View Our Portfolio →</a>
               </div>

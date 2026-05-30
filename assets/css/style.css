@@ -1364,3 +1364,60 @@ input:focus, select:focus, textarea:focus {
   .form-panel { order: 1 !important; }
   .info-panel { order: 2 !important; }
 }
+
+
+/* === Force white background, black buttons, right-aligned hamburger, no bold text tags === */
+.label-text { font-weight: inherit !important; }
+.mini-card .label-text {
+  display: block;
+  font-size: 1.55rem;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.stat .label-text {
+  display: block;
+  color: #000000 !important;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.check-item .label-text {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text);
+}
+.info-list .item .label-text {
+  color: var(--text);
+  display: block;
+  margin-bottom: 4px;
+}
+.quote .label-text { color: #000000 !important; }
+.chat-header .label-text {
+  display: block;
+  font-size: 0.97rem;
+}
+.legal-page .legal-warning .label-text,
+.legal-page .legal-highlight .label-text {
+  font-weight: inherit !important;
+}
+@media (max-width: 860px) {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .menu-toggle {
+    margin-left: auto;
+    order: 3;
+  }
+}
+#contact-anchor,
+#contactForm {
+  scroll-margin-top: 110px;
+}

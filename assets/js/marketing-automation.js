@@ -141,10 +141,10 @@
     overlay.setAttribute('aria-label', 'Special offer before you leave');
     overlay.innerHTML = `
       <div class="nd-exit-box">
-        <button class="nd-exit-close" aria-label="Close">&times;</button>
+        <spanutton class="nd-exit-close label-text" aria-label="Close">&times;</button>
         <div class="nd-exit-icon">⚡</div>
         <h2 class="nd-exit-title">Wait — before you leave!</h2>
-        <p class="nd-exit-sub">Get a <strong>free website audit</strong> within 24h<br>+ a complimentary strategic consultation.</p>
+        <p class="nd-exit-sub">Get a <span class="label-text">free website audit</span> within 24h<spanr class="label-text">+ a complimentary strategic consultation.</p>
         <div class="nd-exit-badges">
           <span>✓ No commitment</span>
           <span>✓ Response within 24h</span>
@@ -152,7 +152,7 @@
         </div>
         <form class="nd-exit-form" id="nd-exit-form">
           <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
-          <button type="submit" class="nd-exit-btn">Get my free audit →</button>
+          <spanutton type="submit" class="nd-exit-btn label-text">Get my free audit →</button>
         </form>
         <div class="nd-exit-msg" id="nd-exit-msg" hidden></div>
         <p class="nd-exit-dismiss">No thanks, I don't need a better website.</p>
@@ -224,16 +224,16 @@
      MODULE 2 — SOCIAL PROOF TICKER
   ──────────────────────────────────────────────────────────────── */
   const socialProofNotifs = [
-    { icon: '🇬🇧', msg: '<strong>James T.</strong> (London) just requested a quote for an e-commerce site', time: '2 min ago' },
-    { icon: '🇫🇷', msg: '<strong>Marie D.</strong> (Paris) booked a strategic consultation', time: '5 min ago' },
-    { icon: '🇺🇸', msg: '<strong>Sarah K.</strong> (New York) started a mobile app project', time: '8 min ago' },
-    { icon: '🇦🇺', msg: '<strong>Daniel R.</strong> (Sydney) launched his business website', time: '12 min ago' },
-    { icon: '🇨🇦', msg: '<strong>Emily L.</strong> (Toronto) received her free web audit', time: '15 min ago' },
-    { icon: '🇩🇪', msg: '<strong>Thomas B.</strong> (Berlin) is exploring premium packages', time: '18 min ago' },
-    { icon: '🇬🇧', msg: '<strong>Sophie M.</strong> (Manchester) launched her landing page', time: '21 min ago' },
-    { icon: '🇺🇸', msg: '<strong>Michael F.</strong> (Chicago) ordered a corporate website', time: '24 min ago' },
-    { icon: '🇸🇬', msg: '<strong>Wei Z.</strong> (Singapore) requested an SEO audit', time: '28 min ago' },
-    { icon: '🇫🇷', msg: '<strong>Antoine S.</strong> (Lyon) signed for a mobile application', time: '33 min ago' },
+    { icon: '🇬🇧', msg: '<span class="label-text">James T.</span> (London) just requested a quote for an e-commerce site', time: '2 min ago' },
+    { icon: '🇫🇷', msg: '<span class="label-text">Marie D.</span> (Paris) booked a strategic consultation', time: '5 min ago' },
+    { icon: '🇺🇸', msg: '<span class="label-text">Sarah K.</span> (New York) started a mobile app project', time: '8 min ago' },
+    { icon: '🇦🇺', msg: '<span class="label-text">Daniel R.</span> (Sydney) launched his business website', time: '12 min ago' },
+    { icon: '🇨🇦', msg: '<span class="label-text">Emily L.</span> (Toronto) received her free web audit', time: '15 min ago' },
+    { icon: '🇩🇪', msg: '<span class="label-text">Thomas B.</span> (Berlin) is exploring premium packages', time: '18 min ago' },
+    { icon: '🇬🇧', msg: '<span class="label-text">Sophie M.</span> (Manchester) launched her landing page', time: '21 min ago' },
+    { icon: '🇺🇸', msg: '<span class="label-text">Michael F.</span> (Chicago) ordered a corporate website', time: '24 min ago' },
+    { icon: '🇸🇬', msg: '<span class="label-text">Wei Z.</span> (Singapore) requested an SEO audit', time: '28 min ago' },
+    { icon: '🇫🇷', msg: '<span class="label-text">Antoine S.</span> (Lyon) signed for a mobile application', time: '33 min ago' },
   ];
 
   let notifIndex = 0;
@@ -271,7 +271,7 @@
           <p class="nd-notif-text">${n.msg}</p>
           <p class="nd-notif-time">🕐 ${n.time}</p>
         </div>
-        <button class="nd-notif-close" aria-label="Close">&times;</button>
+        <spanutton class="nd-notif-close label-text" aria-label="Close">&times;</button>
       </div>
     `;
     notifEl.querySelector('.nd-notif-close').addEventListener('click', () => {
@@ -304,7 +304,7 @@
     grid.innerHTML = statsData.map((s, i) => `
       <div class="stat nd-stat" data-value="${s.value}" data-suffix="${s.suffix}" data-prefix="${s.prefix}" style="animation-delay:${i * 0.15}s">
         <div class="nd-stat-icon">${s.icon}</div>
-        <strong class="nd-stat-num">${s.prefix}0${s.suffix}</strong>
+        <span class="nd-stat-num label-text">${s.prefix}0${s.suffix}</span>
         <span>${s.text}</span>
       </div>
     `).join('');
@@ -355,11 +355,11 @@
     bar.innerHTML = `
       <div class="nd-sticky-inner">
         <span class="nd-sticky-text">
-          <strong>🎯 Free website audit included</strong> — Receive a complete report for your website within 24h
+          <span class="label-text">🎯 Free website audit included</span> — Receive a complete report for your website within 24h
         </span>
         <div class="nd-sticky-actions">
           <a href="#contactForm" class="nd-sticky-btn">Claim now →</a>
-          <button class="nd-sticky-dismiss" aria-label="Close">&times;</button>
+          <spanutton class="nd-sticky-dismiss label-text" aria-label="Close">&times;</button>
         </div>
       </div>
     `;
@@ -409,7 +409,7 @@
     const banner = document.createElement('div');
     banner.className = 'nd-urgency-banner';
     banner.innerHTML = `
-      🔥 Launch offer — <strong>${CONFIG.urgencySlots} spots available this month</strong>
+      🔥 Launch offer — <span class="label-text">${CONFIG.urgencySlots} spots available this month</span>
       · Free web audit included · Expires in <span id="nd-urgency-timer">${days}d ${hrs}h</span>
     `;
     hero.insertAdjacentElement('beforebegin', banner);
@@ -471,15 +471,15 @@
     overlay.id = 'nd-hot-overlay';
     overlay.innerHTML = `
       <div class="nd-hot-box">
-        <button class="nd-hot-close" aria-label="Close">&times;</button>
+        <spanutton class="nd-hot-close label-text" aria-label="Close">&times;</button>
         <div class="nd-hot-badge">🔥 You seem interested</div>
         <h2 class="nd-hot-title">Let's talk about your project!</h2>
-        <p class="nd-hot-sub">Our team can call you back within <strong>24 hours</strong> for a free consultation.</p>
+        <p class="nd-hot-sub">Our team can call you back within <span class="label-text">24 hours</span> for a free consultation.</p>
         <form id="nd-hot-form" class="nd-hot-form">
           <input type="text" name="name" placeholder="Your first name" required />
           <input type="tel" name="phone" placeholder="Your phone number" />
           <input type="email" name="email" placeholder="Your email address" required />
-          <button type="submit" class="nd-hot-btn">📞 Get a free callback</button>
+          <spanutton type="submit" class="nd-hot-btn label-text">📞 Get a free callback</button>
         </form>
         <div class="nd-hot-msg" id="nd-hot-msg" hidden></div>
       </div>
@@ -551,12 +551,12 @@
     badges.className = 'nd-trust-strip';
     badges.innerHTML = `
       <div class="nd-trust-inner">
-        <div class="nd-trust-item"><span>🔒</span><strong>100% Secure Payment</strong></div>
-        <div class="nd-trust-item"><span>✅</span><strong>Satisfaction Guaranteed</strong></div>
-        <div class="nd-trust-item"><span>⚡</span><strong>2-week Delivery</strong></div>
-        <div class="nd-trust-item"><span>🛡️</span><strong>GDPR Compliant</strong></div>
-        <div class="nd-trust-item"><span>🤝</span><strong>30-day Support Included</strong></div>
-        <div class="nd-trust-item"><span>🌍</span><strong>Clients in 8 Countries</strong></div>
+        <div class="nd-trust-item"><span>🔒</span><span class="label-text">100% Secure Payment</span></div>
+        <div class="nd-trust-item"><span>✅</span><span class="label-text">Satisfaction Guaranteed</span></div>
+        <div class="nd-trust-item"><span>⚡</span><span class="label-text">2-week Delivery</span></div>
+        <div class="nd-trust-item"><span>🛡️</span><span class="label-text">GDPR Compliant</span></div>
+        <div class="nd-trust-item"><span>🤝</span><span class="label-text">30-day Support Included</span></div>
+        <div class="nd-trust-item"><span>🌍</span><span class="label-text">Clients in 8 Countries</span></div>
       </div>
     `;
     contact.insertAdjacentElement('beforebegin', badges);
@@ -583,8 +583,8 @@
           <a href="#" class="nd-cookie-more">Learn more</a>
         </p>
         <div class="nd-cookie-btns">
-          <button class="nd-cookie-accept">Accept</button>
-          <button class="nd-cookie-decline">Decline</button>
+          <spanutton class="nd-cookie-accept label-text">Accept</button>
+          <spanutton class="nd-cookie-decline label-text">Decline</button>
         </div>
       </div>
     `;
