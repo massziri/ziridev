@@ -75,7 +75,7 @@
 
   const html = `
     <style>${styles}</style>
-    <spanutton id="nd-chat-bubble" aria-label="Chat with Ziri Dev AI assistant" class="label-text">
+    <button id="nd-chat-bubble" aria-label="Chat with Ziri Dev AI assistant" class="label-text">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
@@ -92,19 +92,19 @@
             <span class="nd-status"><span class="nd-dot"></span> Online — replies in seconds</span>
           </div>
         </div>
-        <spanutton id="nd-close-btn" aria-label="Close chat" class="label-text">✕</button>
+        <button id="nd-close-btn" aria-label="Close chat" class="label-text">✕</button>
       </div>
       <div id="nd-msgs" aria-live="polite" aria-label="Chat messages"></div>
       <div class="nd-quick-btns" id="nd-quick-btns">
-        <spanutton class="nd-qbtn label-text" data-q="How much does a website cost?">💶 Pricing</button>
-        <spanutton class="nd-qbtn label-text" data-q="How long does it take?">⏱ Timeline</button>
-        <spanutton class="nd-qbtn label-text" data-q="I need an e-commerce site">🛒 E-commerce</button>
-        <spanutton class="nd-qbtn label-text" data-q="Tell me about your process">🔄 Process</button>
+        <button class="nd-qbtn label-text" data-q="How much does a website cost?">💶 Pricing</button>
+        <button class="nd-qbtn label-text" data-q="How long does it take?">⏱ Timeline</button>
+        <button class="nd-qbtn label-text" data-q="I need an e-commerce site">🛒 E-commerce</button>
+        <button class="nd-qbtn label-text" data-q="Tell me about your process">🔄 Process</button>
       </div>
       <div class="nd-wa-hint">Or chat directly: <a href="https://wa.me/${WA_NUMBER}" target="_blank" rel="noopener">WhatsApp +212 665 103 031</a></div>
       <div class="nd-input-row">
         <input type="text" id="nd-input" placeholder="Type your message…" autocomplete="off" aria-label="Chat message input" maxlength="500" />
-        <spanutton id="nd-send" aria-label="Send message" class="label-text">
+        <button id="nd-send" aria-label="Send message" class="label-text">
           <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
         </button>
       </div>

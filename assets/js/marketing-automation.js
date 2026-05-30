@@ -141,7 +141,7 @@
     overlay.setAttribute('aria-label', 'Special offer before you leave');
     overlay.innerHTML = `
       <div class="nd-exit-box">
-        <spanutton class="nd-exit-close label-text" aria-label="Close">&times;</button>
+        <button class="nd-exit-close label-text" aria-label="Close">&times;</button>
         <div class="nd-exit-icon">⚡</div>
         <h2 class="nd-exit-title">Wait — before you leave!</h2>
         <p class="nd-exit-sub">Get a <span class="label-text">free website audit</span> within 24h<spanr class="label-text">+ a complimentary strategic consultation.</p>
@@ -152,7 +152,7 @@
         </div>
         <form class="nd-exit-form" id="nd-exit-form">
           <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
-          <spanutton type="submit" class="nd-exit-btn label-text">Get my free audit →</button>
+          <button type="submit" class="nd-exit-btn label-text">Get my free audit →</button>
         </form>
         <div class="nd-exit-msg" id="nd-exit-msg" hidden></div>
         <p class="nd-exit-dismiss">No thanks, I don't need a better website.</p>
@@ -271,7 +271,7 @@
           <p class="nd-notif-text">${n.msg}</p>
           <p class="nd-notif-time">🕐 ${n.time}</p>
         </div>
-        <spanutton class="nd-notif-close label-text" aria-label="Close">&times;</button>
+        <button class="nd-notif-close label-text" aria-label="Close">&times;</button>
       </div>
     `;
     notifEl.querySelector('.nd-notif-close').addEventListener('click', () => {
@@ -359,7 +359,7 @@
         </span>
         <div class="nd-sticky-actions">
           <a href="#contactForm" class="nd-sticky-btn">Claim now →</a>
-          <spanutton class="nd-sticky-dismiss label-text" aria-label="Close">&times;</button>
+          <button class="nd-sticky-dismiss label-text" aria-label="Close">&times;</button>
         </div>
       </div>
     `;
@@ -471,7 +471,7 @@
     overlay.id = 'nd-hot-overlay';
     overlay.innerHTML = `
       <div class="nd-hot-box">
-        <spanutton class="nd-hot-close label-text" aria-label="Close">&times;</button>
+        <button class="nd-hot-close label-text" aria-label="Close">&times;</button>
         <div class="nd-hot-badge">🔥 You seem interested</div>
         <h2 class="nd-hot-title">Let's talk about your project!</h2>
         <p class="nd-hot-sub">Our team can call you back within <span class="label-text">24 hours</span> for a free consultation.</p>
@@ -479,7 +479,7 @@
           <input type="text" name="name" placeholder="Your first name" required />
           <input type="tel" name="phone" placeholder="Your phone number" />
           <input type="email" name="email" placeholder="Your email address" required />
-          <spanutton type="submit" class="nd-hot-btn label-text">📞 Get a free callback</button>
+          <button type="submit" class="nd-hot-btn label-text">📞 Get a free callback</button>
         </form>
         <div class="nd-hot-msg" id="nd-hot-msg" hidden></div>
       </div>
@@ -583,8 +583,8 @@
           <a href="#" class="nd-cookie-more">Learn more</a>
         </p>
         <div class="nd-cookie-btns">
-          <spanutton class="nd-cookie-accept label-text">Accept</button>
-          <spanutton class="nd-cookie-decline label-text">Decline</button>
+          <button class="nd-cookie-accept label-text">Accept</button>
+          <button class="nd-cookie-decline label-text">Decline</button>
         </div>
       </div>
     `;
